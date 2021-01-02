@@ -1,4 +1,4 @@
-# CO637 Natraul Computation
+# CO637 Natural Computation
 
 Coursework for Module CO637
 
