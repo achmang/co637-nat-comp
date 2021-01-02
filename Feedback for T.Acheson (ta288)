@@ -1,0 +1,135 @@
+Feedback for T.Acheson (ta288)
+ 
+ Time of execution on raptor in seconds  8.991 seconds
+************************************
+************************************
+Feedback for Natural Computation Assessment 1: Stochastic
+************************************
+************************************
+ 
+ 
+ 
+ 
+Section 1: Compilations
+************************************
+ 
+Your code compiled and has basic functionality.
+
+ You receive 40 marks
+
+
+
+ Section 2: Questions 1-6
+************************************
+ 
+ 
+Question 1
+ 
+I chose the following parameters:
+ int  numStates =9;
+ int s1 =5;
+ int s2 = 5;
+ 
+I asked for a self-transition of state 5.
+ This is the centre-state of the grid and the only one in the system that has a 0 self-transition probability.
+  Therefore the correct solution for this is A1=0. Your code returned: 0.0
+ which is correct.
+
+ You receive 10 marks.
+ 
+ 
+Question 2
+ 
+I chose the following parameters:
+ int  numStates =4;
+ int s1 =4;
+ int s2 = 3;
+ 
+The correct solution for this is A2=0.25. Your code returned: 0.25
+ which is correct.
+
+ You receive 10 marks.
+ 
+ 
+Question 3
+ 
+I chose the following parameters:
+ int  numStates =9;
+ int s1 =1;
+ int s2 = 1;
+ TS=4
+ 
+So, I am asking here about the probability that you start in state 1 and then after 4 time-steps you are again or still in state 1.
+ The way to solve this is to simulate the MC many times (say N times) for 4 time-steps. Then you record
+ how often you end up in state 1 (call this number k).
+ Then you simply return k/N.
+ Depending on the size of N you will make an error that way; the higher N the smaller the error. The exact result is 0.234375. I accept all results that are within 0.02 of the correct result. If the error is 0.04 then you get half marks. Otherwise none.
+
+ 
+The correct solution for this is A2=0.234375. Your code returned: 0.23433
+ which is correct.
+
+ You receive 10 marks.
+ 
+ 
+Question 4
+ 
+I split this question up into two tests. Each of which contributes partial marks. The second test receives less because it covers knowledge that was already tested in the previous questions.
+The first test is as follows
+
+ 
+I chose the  parameters:
+ ssprob  = {0.05,0.1,0.1,0.2,0.2,0.1,0.1,0.1,0.05};
+ s1=5;
+ s2=5;
+ 
+I asked again for the self-transition probability to state 5. In this case, the correct result is 1/4. You can work this out by calculating the probalities to transition to states 6,4,2 and 8 which are
+ 1/8, 1/4,1/8,1/8 respectively. The sum of those is 5/8. The self-transition probability is then 1-5/8, which is 3/8 = 1/4=0.375.
+ Your answer is 0.0
+ which is incorrect. 
+
+ You receive 0 marks.
+The second test is the same as above, but instead asking for the self-transition I ask for the transition from 5-> 6. The correct answer is (1/4)*min(1,0.1/0.2)=0.125.
+ Your code returned 0.125
+ which is correct. 
+
+ You receive 3 marks.
+ 
+ 
+Question 5
+ 
+I chose the following parameters:
+ rates = {10.0,20.0,10.0,1.0,1.0,1.0};
+ s1=1;
+ s2=3;
+ 
+The solution here is simply to calculate (rate to go to 3) divided by the (sum of all rates to leave from 1), which is 20/30 = 2/3=0.6666. Your answer is:  0.6666666666666666
+ which is correct. 
+
+ You receive 10 marks.
+ 
+ 
+Question 6
+ 
+I chose the same rates as in Q5 and otherwise the following parameters:
+ TSC= 0.07 ;
+ s1=1;
+ s2=3;
+ 
+This was perhaps the most difficult question. To solve it you needed to simulate the CTMC untill the time is larger than 0.05 and then check what state you end up in.
+  You do this N times, and count the number k of times when you end up in state 3. Your result is then k/N.
+ The acccuracy of the result depends on N. I allow an error of 0.02 without mark deduction.
+ If your error is 0.04 or smaller you get half marks. Otherwise none. The correct answer is: 0.5895277565988174.  Your answer is:  0.58953818
+ which is correct. 
+
+ You receive 10 marks.
+
+
+
+
+ Section 3: Summary
+************************************
+
+
+
+Your total mark: 93
