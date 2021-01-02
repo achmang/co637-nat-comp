@@ -1,1 +1,1 @@
-# co637-nat-comp
+# CO637 Natraul Computation
